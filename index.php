@@ -1,18 +1,50 @@
 <?php
-$num3=15;
-function optellen($num1,$num2){
-  $num3=15;
-    echo($num2);
-  echo "<br>";
-  echo($num3);
-  return($num1+$num2);  
-  
+$getalurl1 = $_GET['getal1'];
+$getalurl2 = $_GET['getal2'];
+$operator = $_GET['operator'];
+switch($operator){  
+    case  "plus":
+        optellen($getalurl1,$getalurl2);
+        break;
+    case  "min":
+        aftrekken($getalurl1,$getalurl2);
+        break;
+    case  "keer":
+        vermenigvuligen($getalurl1,$getalurl2);
+        break;
+    case  "delen":
+        delen($getalurl1,$getalurl2);
+        break;
+    Defaul:
+        echo "foute invoer";
+    }
+// optellen
+function optellen($getal1,$getal2){
+        $som = $getal1 + $getal2;
+                echo $getal1."+".$getal2."=".$som."<br>";
+                
 }
-
-$bla1=optellen(3,5); //Uitkomst is 6
-//$bla2=optellen(9,4); //Uitkomst is 6
-$num3=15;
-
-echo($bla1);
-
+// aftrekken
+function aftrekken($getal1,$getal2){
+        $som = $getal1 - $getal2;
+                echo $getal1."-".$getal2."=".$som."<br>";
+                
+}
+// delen
+function delen($getal1,$getal2){
+        $som = $getal1 / $getal2;
+                echo $getal1.":".$getal2."=".$som."<br>";
+                
+}
+// vermenigvuldigen
+function vermenigvuligen($getal1,$getal2){
+        $som = $getal1 * $getal2;
+                echo $getal1."*".$getal2."=".$som."<br>";
+                
+}
+//optellen($getalurl1,$getalurl2);
+//aftrekken($getalurl1,$getalurl2);
+//delen($getalurl1,$getalurl2);
+//vermenigvuligen($getalurl1,$getalurl2);
+        
 ?>
