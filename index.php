@@ -1,27 +1,16 @@
 <?php
-$K_Keuze = $_GET['weekdag'];
+    Rekenmachine ("Thomas",2,8);
+   
+    function Rekenmachine($Voornaam,$getal1,$getal2){
+        echo "Beste ".$Voornaam;
+        echo "Bij deze schrijf ik u het volgende";
+        echo "<br>";
+    //  echo "Het resulaat van het optellen van ".$getal1." + ".$getal2." is ".$getal1 + $getal2;
+        echo $getal1 + $getal2;
+        echo "<br>";
+    }
 
-switch($K_Keuze){
-    case "Maandag":
-        echo "Wij eten erwtensoep";
-        break;
-    case "Dinsdag":
-        echo "Vandaag hebben we heerlijke wraps";
-        break;
-    case "Woensdag":
-        echo "Vandaag is het gehakt dag";
-        break;
-    case "Donderdag":
-        echo "Friet staat er voor vandaag op het menu";
-        break;
-    case "Vrijdag":
-        echo "Vis op het menu";
-        break;
-    case "Zaterdag":
-        echo "Mag Thomas kiezen";
-        break;
-    case "Zondag":
-        echo "Hosti's!!!!!";
-        break;
-}
+   Rekenmachine("Roan",6,8);
+   Rekenmachine("Wes",25,25);
+
 ?>
